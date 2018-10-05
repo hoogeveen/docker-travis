@@ -3,7 +3,9 @@ services:
   - docker
 script:
   - docker build -t hoogeveen/docker-travis .
-  - docker run hoogeveen/docker-travis
+  - docker build -t travis-test -f Dockerfile.test --no-cache .
+  - docker run --rm travis-test
+  - docker rmi travis-test
 
 after_script:
   - docker images
