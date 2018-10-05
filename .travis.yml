@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+script:
+  - docker build -t hoogeveen/docker-travis .
+  - docker run hoogeveen/docker-travis
+
+after_script:
+  - docker images
