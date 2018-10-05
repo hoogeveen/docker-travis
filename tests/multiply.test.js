@@ -1,5 +1,5 @@
 function multiply(a, b) {
-  return a * a;
+  return a * b;
 }
 
 test('multiplying 2 * 3 to equal 6', () => {
